@@ -67,12 +67,15 @@ section.main .hero #text-roll {
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
   text-align: center;
-  padding: 0.5rem;
+  border: none;
+  outline: none;
 }
 
 section.main .hero .text-roll-ani {
   -webkit-transform: rotate(0.005turn) scaleY(1) scale(1.02);
           transform: rotate(0.005turn) scaleY(1) scale(1.02);
+  border: none;
+  outline: none;
 }
 
 section.main .hero p {

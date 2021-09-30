@@ -66,11 +66,14 @@ section.main .hero {
     -moz-text-fill-color: transparent;
     transition: transform 1s;
     text-align: center;
-    padding: 0.5rem;
+    border: none;
+    outline: none;
   }
 
   .text-roll-ani {
     transform: rotate(0.005turn) scaleY(1) scale(1.02);
+    border: none;
+    outline: none;
   }
 
   p {
