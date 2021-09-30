@@ -70,8 +70,8 @@ section.main .hero #text-roll {
 }
 
 section.main .hero .text-roll-ani {
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
+  -webkit-transform: rotate(0.005turn) scaleY(1) scale(1.02);
+          transform: rotate(0.005turn) scaleY(1) scale(1.02);
 }
 
 section.main .hero p {
