@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap");
 :root {
   font-size: 10px;
 }
@@ -19,7 +19,7 @@ body {
 }
 
 section {
-  padding: 2.7rem;
+  padding: clamp(1rem, 4vw, 3rem);
 }
 
 section.nav {
@@ -77,14 +77,10 @@ section.main .hero a {
   margin: 4rem 0 2rem;
   background-color: #3146ed;
   color: white;
-  padding: 1.7rem;
+  padding: 1.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-text-size-adjust: 1.8rem;
-     -moz-text-size-adjust: 1.8rem;
-      -ms-text-size-adjust: 1.8rem;
-          text-size-adjust: 1.8rem;
   font-size: 1.8rem;
   font-weight: 600;
   -webkit-box-pack: center;
@@ -94,5 +90,91 @@ section.main .hero a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+section.main .hero a span {
+  background-color: #2b3bbf;
+  padding: 0.6rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 1.5rem;
+}
+
+section.main .hero p:last-of-type {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  position: relative;
+  bottom: 1rem;
+}
+
+.table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid rgba(128, 128, 128, 0.301);
+  background-color: white;
+  border-radius: 0.2rem;
+}
+
+.table .thead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.4;
+  font-weight: 500;
+}
+
+.table .thead p {
+  padding: 1rem;
+}
+
+.table .tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid rgba(128, 128, 128, 0.301);
+}
+
+.table .tbody-coin p:last-child {
+  opacity: 0.6;
+}
+
+.table .tbody-info {
+  text-align: right;
+}
+
+.table .tbody-info .negative {
+  color: red;
+}
+
+.table .tbody-info .positive {
+  color: green;
 }
 /*# sourceMappingURL=style.css.map */

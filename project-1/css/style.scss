@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap");
 
 :root {
   font-size: 10px;
@@ -25,7 +25,7 @@ body {
 }
 
 section {
-  padding: 2.7rem;
+  padding: clamp(1rem, 4vw, 3rem);
 }
 
 section.nav {
@@ -78,13 +78,77 @@ section.main .hero {
     margin: 4rem 0 2rem;
     background-color: $base-blue;
     color: white;
-    padding: 1.7rem;
+    padding: 1.8rem;
     display: flex;
-    text-size-adjust: 1.8rem;
     font-size: 1.8rem;
     font-weight: 600;
     justify-content: center;
     border-radius: 0.2rem;
     align-items: center;
+    position: relative;
+
+    span {
+      background-color: #2b3bbf;
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 1.5rem;
+    }
+  }
+
+  p:last-of-type {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    position: relative;
+    bottom: 1rem;
+  }
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(128, 128, 128, 0.301);
+  background-color: white;
+  border-radius: 0.2rem;
+}
+
+.table .thead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.4;
+  font-weight: 500;
+  p {
+    padding: 1rem;
+  }
+}
+
+.table .tbody {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(128, 128, 128, 0.301);
+}
+
+.table .tbody-coin {
+  p {
+    &:last-child {
+      opacity: 0.6;
+    }
+  }
+}
+
+.table .tbody-info {
+  text-align: right;
+
+  .negative {
+    color: red;
+  }
+  .positive {
+    color: green;
   }
 }
