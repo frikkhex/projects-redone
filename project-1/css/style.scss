@@ -122,13 +122,13 @@ section.main .hero {
   opacity: 0.4;
   font-weight: 500;
   p {
-    padding: 1rem;
+    padding: 1.5rem 2rem;
   }
 }
 
 .table .tbody {
   display: flex;
-  padding: 1rem;
+  padding: 1.5rem 2rem;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid rgba(128, 128, 128, 0.301);
@@ -146,9 +146,51 @@ section.main .hero {
   text-align: right;
 
   .negative {
-    color: red;
+    color: rgb(255, 28, 11);
   }
   .positive {
-    color: green;
+    color: rgb(22, 161, 57);
+  }
+}
+
+.description {
+  padding: 1.5rem 2rem;
+}
+
+.description .line {
+  background: #d9d9d9;
+  border-radius: 2px;
+  height: 18px;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+}
+.description .line-1 {
+  width: 100%;
+}
+
+.description .line::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #d9d9d9 0%,
+    rgba(0, 0, 0, 0.05) 20%,
+    #d9d9d9 40%,
+    #d9d9d9 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 450px 400px;
+  animation: shimmer 1s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
   }
 }

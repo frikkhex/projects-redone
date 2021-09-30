@@ -8,6 +8,7 @@ Feedback from Erik Solhaug
 
 const url = "https://api.coinlore.net/api/tickers/";
 const coinContainer = document.querySelector(".table");
+const skeletonLoader = document.querySelector(".card");
 
 const fetchData = async () => {
   try {
@@ -16,6 +17,7 @@ const fetchData = async () => {
     const data = result.data;
 
     let trend = "";
+    let html = "";
 
     data.forEach((el, index) => {
       const id = el.id;
@@ -32,7 +34,7 @@ const fetchData = async () => {
         trend = "positive";
       }
 
-      coinContainer.innerHTML += `
+      html += `
         <div class="tbody">
           <div class="tbody-coin">
             <p>${name}</p>
@@ -44,6 +46,8 @@ const fetchData = async () => {
           </div>
         </div>
       `;
+
+      coinContainer.innerHTML = html;
     });
   } catch (error) {
     console.log(error);
