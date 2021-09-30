@@ -69,12 +69,11 @@ section.main .hero {
     border: none;
     outline: none;
     width: 100%;
-    backface-visibility: hidden;
+    margin: 0.5rem;
   }
 
   .text-roll-ani {
     transform: rotate(0.005turn) scaleY(1) scale(1.02);
-    backface-visibility: hidden;
   }
 
   p {

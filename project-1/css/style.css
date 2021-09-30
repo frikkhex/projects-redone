@@ -70,15 +70,12 @@ section.main .hero #text-roll {
   border: none;
   outline: none;
   width: 100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  margin: 0.5rem;
 }
 
 section.main .hero .text-roll-ani {
   -webkit-transform: rotate(0.005turn) scaleY(1) scale(1.02);
           transform: rotate(0.005turn) scaleY(1) scale(1.02);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 
 section.main .hero p {
