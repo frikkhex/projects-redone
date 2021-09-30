@@ -67,6 +67,7 @@ section.main .hero #text-roll {
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
   text-align: center;
+  padding: 0.5rem;
 }
 
 section.main .hero .text-roll-ani {
