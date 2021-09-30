@@ -10,6 +10,8 @@ $secondary-text-color: #858696;
 $negative-red: #f01d1d;
 $base-blue: #3146ed;
 
+$medium: 800px;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -220,4 +222,7 @@ section.main .hero {
   100% {
     background-position: 450px 0;
   }
+}
+
+@media screen and (min-width: $medium) {
 }
