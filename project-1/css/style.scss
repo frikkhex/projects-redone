@@ -73,9 +73,9 @@ section.main .hero {
 
   .text-roll-ani {
     transform: rotate(0.005turn) scaleY(1) scale(1.02);
-    background-color: $base-blue;
-    background-image: linear-gradient(160deg, $base-blue 0%, #08c1fa 100%);
-    background-size: 100%;
+    background-color: none;
+    background-image: none;
+    background-size: 0;
     background-repeat: repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
