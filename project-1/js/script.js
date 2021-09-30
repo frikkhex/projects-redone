@@ -35,6 +35,7 @@ const fetchData = async () => {
       }
 
       html += `
+      <a href="#">
         <div class="tbody">
           <div class="tbody-coin">
             <p>${name}</p>
@@ -45,6 +46,7 @@ const fetchData = async () => {
             <p class="${trend}">${price24h}%</p>
           </div>
         </div>
+        </a>
       `;
 
       coinContainer.innerHTML = html;
@@ -55,3 +57,18 @@ const fetchData = async () => {
 };
 
 fetchData();
+
+// Animation
+const animationSpan = document.querySelector("#text-roll");
+const animationArray = ["No gimmicks.", "Just crypto.", "Painlessly fast."];
+
+let i = 0;
+const animationInterval = setInterval(() => {
+  animationSpan.innerHTML = animationArray[parseInt(i / 2, 10) % animationArray.length];
+  if (i % 2 !== 0) {
+    animationSpan.classList.remove("text-roll-ani");
+  } else {
+    animationSpan.classList.add("text-roll-ani");
+  }
+  i++;
+}, 1500);
