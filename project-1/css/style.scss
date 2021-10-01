@@ -75,7 +75,7 @@ section.main .hero {
   }
 
   .text-roll-ani {
-    transform: scaleY(1) scale(1.07);
+    transform: turn(0.002) scaleY(1) scale(1.07);
   }
 
   p {
