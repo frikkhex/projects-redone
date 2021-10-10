@@ -69,4 +69,4 @@ const animationInterval = setInterval(() => {
     animationSpan.classList.add("text-roll-ani");
   }
   i++;
-}, 2000);
+}, 1800);
