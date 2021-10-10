@@ -44,6 +44,17 @@ nav ul {
 
   li {
     margin: 5px;
+    a {
+      padding: 10px;
+      border: 1px solid $base-blue;
+      background-color: $base-blue;
+      color: white;
+      &:hover {
+        border: 1px solid $base-blue;
+        color: $base-blue;
+        background: none;
+      }
+    }
   }
 }
 
@@ -128,6 +139,17 @@ section.main .hero {
     position: relative;
     bottom: 2rem;
   }
+}
+
+.error {
+  display: block;
+  flex-direction: column;
+  text-align: center;
+  color: red;
+  background-color: rgb(255, 176, 176);
+  padding: 25px;
+  font-size: 24px;
+  font-weight: 300;
 }
 
 .table {
@@ -224,5 +246,76 @@ section.main .hero {
   }
 }
 
-@media screen and (min-width: $medium) {
+// Details.html
+section.details-main {
+  .main-content {
+    margin: 0 auto;
+  }
+
+  .heading {
+    margin: 1rem 0;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  .card-content {
+    border: 1px solid rgba(128, 128, 128, 0.137);
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 1.2rem;
+    }
+
+    .trade-position {
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      width: fit-content;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .value {
+      display: flex;
+      align-items: baseline;
+      margin: 3rem auto 1rem;
+      p {
+        margin-right: 0.5rem;
+
+        &:nth-child(2) {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .content-trend {
+      display: flex;
+      justify-content: space-around;
+
+      div {
+        padding: 1.5rem;
+        margin: 1rem;
+        p {
+          &:nth-child(1) {
+            font-size: 1.2rem;
+          }
+          &:nth-child(2) {
+            font-weight: 600;
+          }
+        }
+      }
+
+      .positive {
+        color: rgb(16, 104, 53);
+      }
+
+      .negative {
+        color: rgb(97, 17, 17);
+      }
+    }
+  }
 }

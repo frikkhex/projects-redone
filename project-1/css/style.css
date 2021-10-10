@@ -45,6 +45,19 @@ nav ul li {
   margin: 5px;
 }
 
+nav ul li a {
+  padding: 10px;
+  border: 1px solid #3146ed;
+  background-color: #3146ed;
+  color: white;
+}
+
+nav ul li a:hover {
+  border: 1px solid #3146ed;
+  color: #3146ed;
+  background: none;
+}
+
 section.main .hero h1 span {
   font-size: clamp(3.2rem, 8vw, 5rem);
   color: #383946;
@@ -142,6 +155,20 @@ section.main .hero p:last-of-type {
   font-weight: 400;
   position: relative;
   bottom: 2rem;
+}
+
+.error {
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: red;
+  background-color: #ffb0b0;
+  padding: 25px;
+  font-size: 24px;
+  font-weight: 300;
 }
 
 .table {
@@ -257,5 +284,92 @@ section.main .hero p:last-of-type {
   100% {
     background-position: 450px 0;
   }
+}
+
+section.details-main .main-content {
+  margin: 0 auto;
+}
+
+section.details-main .heading {
+  margin: 1rem 0;
+}
+
+section.details-main .heading h1 {
+  font-size: 3rem;
+}
+
+section.details-main .card-content {
+  border: 1px solid rgba(128, 128, 128, 0.137);
+  padding: 2rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.details-main .card-content span {
+  font-size: 1.2rem;
+}
+
+section.details-main .card-content .trade-position {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+section.details-main .card-content .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin: 3rem auto 1rem;
+}
+
+section.details-main .card-content .value p {
+  margin-right: 0.5rem;
+}
+
+section.details-main .card-content .value p:nth-child(2) {
+  font-size: 3rem;
+}
+
+section.details-main .card-content .content-trend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section.details-main .card-content .content-trend div {
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+section.details-main .card-content .content-trend div p:nth-child(1) {
+  font-size: 1.2rem;
+}
+
+section.details-main .card-content .content-trend div p:nth-child(2) {
+  font-weight: 600;
+}
+
+section.details-main .card-content .content-trend .positive {
+  color: #106835;
+}
+
+section.details-main .card-content .content-trend .negative {
+  color: #611111;
 }
 /*# sourceMappingURL=style.css.map */

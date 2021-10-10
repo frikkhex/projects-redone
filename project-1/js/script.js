@@ -9,6 +9,7 @@ Feedback from Erik Solhaug
 const url = "https://api.coinlore.net/api/tickers/";
 const coinContainer = document.querySelector(".table");
 const skeletonLoader = document.querySelector(".card");
+const pageLoad = document.querySelector(".error");
 
 const fetchData = async () => {
   try {
@@ -16,7 +17,7 @@ const fetchData = async () => {
     const result = await response.json();
     const data = result.data;
 
-    let trend = "";
+    let trend;
     let html = "";
 
     data.forEach((el, index) => {
@@ -26,16 +27,12 @@ const fetchData = async () => {
       const priceUsd = el.price_usd;
       const price24h = el.percent_change_24h;
 
-      if (index === 10) throw {};
+      if (index === 20) throw {};
 
-      if (price24h < 0) {
-        trend = "negative";
-      } else {
-        trend = "positive";
-      }
+      price24h < 0 ? (trend = "negative") : (trend = "positive");
 
       html += `
-      <a href="#">
+      <a href="details.html?id=${id}">
         <div class="tbody">
           <div class="tbody-coin">
             <p>${name}</p>
@@ -52,7 +49,8 @@ const fetchData = async () => {
       coinContainer.innerHTML = html;
     });
   } catch (error) {
-    console.log(error);
+    pageLoad.innerHTML = displayError();
+    console.log("Error");
   }
 };
 
