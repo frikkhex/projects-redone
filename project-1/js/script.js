@@ -8,8 +8,6 @@ Feedback from Erik Solhaug
 
 const url = "https://api.coinlore.net/api/tickers/";
 const coinContainer = document.querySelector(".table");
-const skeletonLoader = document.querySelector(".card");
-const pageLoad = document.querySelector(".error");
 
 const fetchData = async () => {
   try {
@@ -48,8 +46,8 @@ const fetchData = async () => {
 
       coinContainer.innerHTML = html;
     });
-  } catch (error) {
-    console.log("watt");
+  } catch (err) {
+    console.error(err);
   }
 };
 
