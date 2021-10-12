@@ -79,16 +79,15 @@ section.main .hero {
     -moz-background-clip: text;
     background-clip: text;
     -moz-text-fill-color: transparent;
-    transition: transform 1s;
+    transition: transform 0.5s;
     text-align: center;
     border: none;
     outline: none;
     width: 100%;
-    margin: 0.5rem;
   }
 
   .text-roll-ani {
-    transform: turn(0.002) scaleY(1) scale(1.07);
+    transform: rotate(-3deg);
   }
 
   p {

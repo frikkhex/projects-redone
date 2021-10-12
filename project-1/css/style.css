@@ -5,7 +5,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: Manrope;
@@ -33,8 +33,8 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 nav ul {
@@ -77,20 +77,19 @@ section.main .hero #text-roll {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -moz-text-fill-color: transparent;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   text-align: center;
   border: none;
   outline: none;
   width: 100%;
-  margin: 0.5rem;
 }
 
 section.main .hero .text-roll-ani {
-  -webkit-transform: turn(0.002) scaleY(1) scale(1.07);
-  transform: turn(0.002) scaleY(1) scale(1.07);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
 }
 
 section.main .hero p {
@@ -117,22 +116,22 @@ section.main .hero a {
   font-size: 1.8rem;
   font-weight: 600;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 0.2rem;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   width: clamp(280px, 95%, 400px);
   -webkit-box-shadow: rgba(148, 164, 255, 0.664) 0 5px 1px;
-  box-shadow: rgba(148, 164, 255, 0.664) 0 5px 1px;
+          box-shadow: rgba(148, 164, 255, 0.664) 0 5px 1px;
 }
 
 section.main .hero a:hover {
   top: 5px;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 section.main .hero a span {
@@ -142,11 +141,11 @@ section.main .hero a span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   right: 1.5rem;
 }
@@ -163,8 +162,8 @@ section.main .hero p:last-of-type {
   display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   color: red;
   background-color: #ffb0b0;
@@ -179,8 +178,8 @@ section.main .hero p:last-of-type {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 1px solid rgba(128, 128, 128, 0.301);
   background-color: white;
   border-radius: 0.2rem;
@@ -191,11 +190,11 @@ section.main .hero p:last-of-type {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity: 0.4;
   font-weight: 500;
 }
@@ -210,11 +209,11 @@ section.main .hero p:last-of-type {
   display: flex;
   padding: 1.5rem 2rem;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-top: 1px solid rgba(128, 128, 128, 0.192);
   color: #383946;
 }
@@ -262,26 +261,12 @@ section.main .hero p:last-of-type {
   content: "";
   height: 100%;
   width: 100%;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#d9d9d9),
-    color-stop(20%, rgba(0, 0, 0, 0.05)),
-    color-stop(40%, #d9d9d9),
-    to(#d9d9d9)
-  );
-  background-image: linear-gradient(
-    to right,
-    #d9d9d9 0%,
-    rgba(0, 0, 0, 0.05) 20%,
-    #d9d9d9 40%,
-    #d9d9d9 100%
-  );
+  background-image: -webkit-gradient(linear, left top, right top, from(#d9d9d9), color-stop(20%, rgba(0, 0, 0, 0.05)), color-stop(40%, #d9d9d9), to(#d9d9d9));
+  background-image: linear-gradient(to right, #d9d9d9 0%, rgba(0, 0, 0, 0.05) 20%, #d9d9d9 40%, #d9d9d9 100%);
   background-repeat: no-repeat;
   background-size: 450px 400px;
   -webkit-animation: shimmer 1s linear infinite;
-  animation: shimmer 1s linear infinite;
+          animation: shimmer 1s linear infinite;
 }
 
 @-webkit-keyframes shimmer {
@@ -323,8 +308,8 @@ section.details-main .card-content {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 section.details-main .card-content span {
@@ -347,8 +332,8 @@ section.details-main .card-content .value {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   margin: 3rem auto 1rem;
 }
 
@@ -365,7 +350,7 @@ section.details-main .card-content .content-trend {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 section.details-main .card-content .content-trend div {
@@ -424,7 +409,7 @@ form button {
   border: none;
   font-size: 18px;
   -webkit-box-shadow: rgba(148, 164, 255, 0.664) 0 5px 1px;
-  box-shadow: rgba(148, 164, 255, 0.664) 0 5px 1px;
+          box-shadow: rgba(148, 164, 255, 0.664) 0 5px 1px;
   border-radius: 2px;
   color: #eaf1ff;
   cursor: pointer;
@@ -433,7 +418,7 @@ form button {
 form button:hover {
   position: relative;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   top: 5px;
   -webkit-transition: 0s ease;
   transition: 0s ease;
@@ -486,7 +471,7 @@ form textarea {
   width: fit-content;
   margin: 10px;
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .formValidation p {
