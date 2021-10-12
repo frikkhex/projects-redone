@@ -49,8 +49,7 @@ const fetchData = async () => {
       coinContainer.innerHTML = html;
     });
   } catch (error) {
-    pageLoad.innerHTML = displayError();
-    console.log("Error");
+    console.log("watt");
   }
 };
 

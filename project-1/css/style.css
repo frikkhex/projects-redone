@@ -16,6 +16,8 @@
 
 body {
   background: #f4f6f9;
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 section {
@@ -87,8 +89,8 @@ section.main .hero #text-roll {
 }
 
 section.main .hero .text-roll-ani {
-  -webkit-transform: rotate(0.005turn) scaleY(1) scale(1.02);
-          transform: rotate(0.005turn) scaleY(1) scale(1.02);
+  -webkit-transform: turn(0.002) scaleY(1) scale(1.07);
+          transform: turn(0.002) scaleY(1) scale(1.07);
 }
 
 section.main .hero p {
@@ -371,5 +373,113 @@ section.details-main .card-content .content-trend .positive {
 
 section.details-main .card-content .content-trend .negative {
   color: #611111;
+}
+
+.form-container {
+  background-color: #fbfbfb;
+  max-width: 700px;
+  margin: 40px auto;
+  border-radius: 5px;
+  padding: 30px;
+  position: relative;
+}
+
+form .form-section {
+  margin: 10px;
+  display: block;
+}
+
+form input {
+  margin-top: 2px;
+  padding: 10px;
+  width: 100%;
+}
+
+form .form-error {
+  display: none;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-left: 5px;
+  color: #ff0c3c;
+}
+
+form button {
+  padding: 15px 30px;
+  margin-top: 20px;
+  background-color: #3146ed;
+  border: none;
+  font-size: 18px;
+  -webkit-box-shadow: rgba(148, 164, 255, 0.664) 0 5px 1px;
+          box-shadow: rgba(148, 164, 255, 0.664) 0 5px 1px;
+  border-radius: 2px;
+  color: #eaf1ff;
+  cursor: pointer;
+}
+
+form button:hover {
+  position: relative;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  top: 5px;
+  -webkit-transition: 0s ease;
+  transition: 0s ease;
+}
+
+form button:focus {
+  border: none;
+  outline: none;
+}
+
+form button:active {
+  border: none;
+  outline: none;
+}
+
+label span {
+  font-size: 14px;
+  color: #3d3d3d;
+}
+
+.form-container p {
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+label input:focus {
+  background-color: rgba(255, 187, 0, 0.1);
+}
+
+form textarea {
+  margin-top: 2px;
+  padding: 10px;
+  width: 100%;
+}
+
+.formValidation {
+  display: none;
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 0;
+  background-color: rgba(159, 255, 209, 0.6);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.formValidation p {
+  font-size: 14px;
+}
+
+.formValidation span {
+  margin-left: 8px;
 }
 /*# sourceMappingURL=style.css.map */
