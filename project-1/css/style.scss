@@ -60,6 +60,26 @@ nav ul {
   }
 }
 
+section.nav-breadcrumbs {
+  display: flex;
+  align-items: center;
+
+  + span,
+  a,
+  i {
+    color: $text-color;
+    margin-right: 1rem;
+  }
+
+  .previous {
+    color: $secondary-text-color;
+    opacity: 0.8;
+  }
+  span {
+    font-weight: 600;
+  }
+}
+
 section.main .hero {
   h1 span {
     font-size: clamp(3.2rem, 8vw, 5rem);
@@ -311,11 +331,17 @@ section.details-main {
       }
 
       .positive {
-        color: rgb(16, 104, 53);
+        color: rgb(4, 129, 56);
+        font-size: 3rem;
+        background-color: rgba(4, 129, 56, 0.05);
+        padding: 2rem;
       }
 
       .negative {
-        color: rgb(97, 17, 17);
+        color: rgb(194, 17, 17);
+        font-size: 3rem;
+        background-color: rgba(194, 17, 17, 0.05);
+        padding: 2rem;
       }
     }
   }

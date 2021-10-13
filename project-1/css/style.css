@@ -60,6 +60,31 @@ nav ul li a:hover {
   background: none;
 }
 
+section.nav-breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.nav-breadcrumbs + span,
+section.nav-breadcrumbs a,
+section.nav-breadcrumbs i {
+  color: #383946;
+  margin-right: 1rem;
+}
+
+section.nav-breadcrumbs .previous {
+  color: #858696;
+  opacity: 0.8;
+}
+
+section.nav-breadcrumbs span {
+  font-weight: 600;
+}
+
 section.main .hero h1 span {
   font-size: clamp(3.2rem, 8vw, 5rem);
   color: #383946;
@@ -367,11 +392,17 @@ section.details-main .card-content .content-trend div p:nth-child(2) {
 }
 
 section.details-main .card-content .content-trend .positive {
-  color: #106835;
+  color: #048138;
+  font-size: 3rem;
+  background-color: rgba(4, 129, 56, 0.05);
+  padding: 2rem;
 }
 
 section.details-main .card-content .content-trend .negative {
-  color: #611111;
+  color: #c21111;
+  font-size: 3rem;
+  background-color: rgba(194, 17, 17, 0.05);
+  padding: 2rem;
 }
 
 .form-container {

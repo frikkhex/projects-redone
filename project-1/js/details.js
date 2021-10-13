@@ -5,6 +5,7 @@ const url = "https://api.coinlore.net/api/ticker/?id=" + id;
 const infoContainer = document.querySelector(".card-content");
 const coinName = document.querySelector("#coin");
 const coinShortName = document.querySelector("#symbol");
+const coinDetailsNav = document.querySelector("#breadcrumbs-id");
 
 const currencyInfo = async () => {
   try {
@@ -14,6 +15,7 @@ const currencyInfo = async () => {
 
     coinName.innerHTML = data.name;
     coinShortName.innerHTML = data.symbol;
+    coinDetailsNav.innerHTML = data.name;
 
     const trendHour = data.percent_change_1h;
     const trendDay = data.percent_change_24h;
@@ -32,20 +34,20 @@ const currencyInfo = async () => {
     <div class="trade-position"><span>#${data.rank}</span> Most traded</div>
                 <div class="value">
                     <p>USD</p>
-                    <p>${data.price_usd}$</p>
+                    <p>${data.price_usd}$ <span>/per coin</span></p>
                 </div>
                 <div class="content-trend">
                     <div class="lastHour">
                         <p>Last Hour</p>
-                        <p class=${trendClassHour}>${trendHour}</p>
+                        <p class=${trendClassHour}>${trendHour}%</p>
                     </div>
                     <div class="lastDay">
                         <p>Last 24hrs</p>
-                        <p class=${trendClassDay}>${trendDay}</p>
+                        <p class=${trendClassDay}>${trendDay}%</p>
                     </div>
                     <div class="lastSeven">
                         <p>Last 7 days</p>
-                        <p class=${trendClassWeek}>${trendWeek}</p>
+                        <p class=${trendClassWeek}>${trendWeek}%</p>
                     </div>
                 </div>
     `;
