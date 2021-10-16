@@ -1,0 +1,250 @@
+:root {
+  font-size: 10px;
+}
+
+$main: #eecf90;
+$secondary: #322826;
+$card-bg: #f5f9fc;
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: $main;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 5rem;
+}
+
+section.hero {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin: 2rem 0;
+    font-size: 9rem;
+    font-weight: 600;
+  }
+
+  p,
+  span {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+  }
+
+  .ctas {
+    display: flex;
+    margin: 2rem 0 5rem;
+
+    a {
+      margin: 2rem;
+      padding: 1.5rem 3rem;
+      border: 1px solid $secondary;
+      border-radius: 2.5rem;
+      color: $secondary;
+      font-size: 2rem;
+      font-weight: 300;
+
+      &:nth-child(2) {
+        color: $main;
+        background-color: $secondary;
+        padding: 1.5rem 7rem;
+      }
+    }
+  }
+
+  img {
+    width: 50%;
+    position: relative;
+    left: 4rem;
+  }
+}
+
+.section-divider {
+  position: relative;
+  .divider-placement {
+    width: 100%;
+    height: 100rem;
+    background-color: white;
+    position: absolute;
+    top: -25rem;
+    z-index: -1;
+  }
+}
+
+section.exhibitions {
+  h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 4.5rem;
+  }
+
+  .cards {
+    margin: 6rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+
+    .card {
+      background-color: $card-bg;
+      height: 20rem;
+      border-radius: 5rem;
+      width: 30rem;
+      margin: 2rem;
+      position: relative;
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem;
+      transition: 0.2s ease;
+
+      &:hover {
+        background-color: $main;
+        transform: scale(1.02) rotate(2deg);
+        box-shadow: 0px 0.9px 2.4px rgba(0, 0, 0, 0.011), 0px 2.3px 5.7px rgba(0, 0, 0, 0.009),
+          0px 4.7px 10.8px rgba(0, 0, 0, 0.009), 0px 9px 19.2px rgba(0, 0, 0, 0.016),
+          0px 18.8px 35.9px rgba(0, 0, 0, 0.034), 0px 57px 86px rgba(0, 0, 0, 0.07);
+      }
+
+      img {
+        position: absolute;
+        top: 2rem;
+      }
+
+      #dna {
+        width: 90px;
+      }
+      #rocketScience {
+        width: 50px;
+        top: 0.5rem;
+        transform: rotate(30deg);
+      }
+      #solarSystem {
+        width: 150px;
+        top: 0.5rem;
+      }
+      #electricity {
+        width: 60px;
+      }
+      p {
+        position: absolute;
+        bottom: 4rem;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #575f60;
+      }
+    }
+  }
+}
+
+section.testimonials {
+  img {
+    position: relative;
+    left: 10rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
