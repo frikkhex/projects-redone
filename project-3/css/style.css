@@ -158,6 +158,7 @@ section.hero img {
   width: 50%;
   position: relative;
   left: 4rem;
+  z-index: 1;
 }
 
 section.exhibitions {
@@ -165,7 +166,6 @@ section.exhibitions {
   padding: 20rem 0;
   position: relative;
   top: -200px;
-  z-index: -1;
 }
 
 section.exhibitions h2 {
