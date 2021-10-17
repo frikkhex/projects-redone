@@ -16,6 +16,7 @@
 body {
   background-color: #eecf90;
   position: relative;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -28,12 +29,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  color: #322826;
 }
 
 .brand-title {
   font-size: 1.5rem;
   margin: 0.5rem;
+  color: #322826;
+}
+
+.brand-title img {
+  margin-right: 1rem;
 }
 
 .navbar-links ul {
@@ -50,7 +56,7 @@ body {
 
 .navbar-links li a {
   text-decoration: none;
-  color: white;
+  color: #322826;
   padding: 1rem;
   display: block;
 }
@@ -118,12 +124,14 @@ section.hero h1 {
   margin: 2rem 0;
   font-size: 9rem;
   font-weight: 600;
+  text-align: center;
 }
 
 section.hero p,
 section.hero span {
   font-size: 3rem;
   font-weight: 300;
+  text-align: center;
 }
 
 section.hero span {
@@ -140,18 +148,24 @@ section.hero .ctas {
 
 section.hero .ctas a {
   margin: 2rem;
-  padding: 1.5rem 3rem;
+  padding: 3rem 4rem;
   border: 1px solid #322826;
-  border-radius: 2.5rem;
+  border-radius: 5rem;
   color: #322826;
   font-size: 2rem;
   font-weight: 300;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+section.hero .ctas a:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 section.hero .ctas a:nth-child(2) {
   color: #eecf90;
   background-color: #322826;
-  padding: 1.5rem 7rem;
 }
 
 section.hero img {
@@ -263,9 +277,7 @@ section.testimonials {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  position: relative;
-  top: -400px;
-  left: 10rem;
+  margin: -400px 0 100px;
 }
 
 section.testimonials h3 {
@@ -281,16 +293,133 @@ section.testimonials .testimonial-cards {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 5rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-@media (max-width: 890px) {
+section.testimonials .testimonial-cards .card {
+  padding: 3rem;
+  margin: 2rem;
+  border-radius: 2rem;
+  color: white;
+  width: 500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+section.testimonials .testimonial-cards .card .person p:nth-child(1) {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+section.testimonials .testimonial-cards .card .person p:nth-child(2) {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+section.testimonials .testimonial-cards .card .person-text {
+  margin-top: 1rem;
+  font-weight: 300;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+section.testimonials .testimonial-cards .one {
+  background-color: #e97233;
+}
+
+section.testimonials .testimonial-cards .two {
+  background-color: #e99633;
+}
+
+section.testimonials .testimonial-cards .three {
+  background-color: #e99633;
+  position: relative;
+  top: -3rem;
+}
+
+section.testimonials .testimonial-cards .four {
+  background-color: #14a763;
+}
+
+section.footer {
+  background-color: #9c5b37;
+}
+
+section.footer footer {
+  color: white;
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 20rem;
+}
+
+section.footer footer .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section.footer footer .content-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: white;
+}
+
+section.footer footer .content-left p {
+  margin-left: 1rem;
+  font-weight: 300;
+}
+
+section.footer footer .content-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.footer footer .content-right h4 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+section.footer footer .content-right a {
+  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.671);
+}
+
+section.footer footer .content-right .right {
+  padding: 3rem 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 1195px) {
   .toggle-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    top: 7rem;
+  }
+  .toggle-button .bar {
+    background-color: #322826;
   }
   .navbar-links {
     display: none;
@@ -320,5 +449,47 @@ section.testimonials .testimonial-cards {
     display: -ms-flexbox;
     display: flex;
   }
+  section.testimonials div.card.three {
+    position: relative;
+    top: 0;
+  }
 }
+
+@media screen and (max-width: 800px) {
+  section.hero h1 {
+    font-size: clamp(4rem, 10vw, 7rem);
+  }
+  section.hero p,
+  section.hero span {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+  }
+  section.hero .ctas a {
+    font-size: 1.6rem;
+    display: inline;
+  }
+  section.testimonials img {
+    width: 250px;
+    position: relative;
+    top: 2rem;
+  }
+  section.footer footer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  section.footer .footer-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.footer .footer-content .content-right {
+    display: block;
+  }
+}
+
+/*
+807 overflow
+942 span text h1
+*/
 /*# sourceMappingURL=style.css.map */
