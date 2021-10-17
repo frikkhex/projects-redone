@@ -207,12 +207,23 @@ section.exhibitions {
 }
 
 section.testimonials {
-  display: flex;
   justify-content: center;
-  margin: 0;
-  img {
-    position: relative;
-    left: 10rem;
+  position: relative;
+  position: relative;
+  top: -400px;
+  left: 10rem;
+
+  h3 {
+    margin: 5rem;
+    color: #af7a3a;
+    font-size: 5rem;
+  }
+
+  .testimonial-cards {
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+    flex-wrap: wrap;
   }
 }
 

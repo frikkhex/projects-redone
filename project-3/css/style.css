@@ -259,18 +259,31 @@ section.exhibitions .cards .card p {
 }
 
 section.testimonials {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  position: relative;
+  top: -400px;
+  left: 10rem;
+}
+
+section.testimonials h3 {
+  margin: 5rem;
+  color: #af7a3a;
+  font-size: 5rem;
+}
+
+section.testimonials .testimonial-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0;
-}
-
-section.testimonials img {
-  position: relative;
-  left: 10rem;
+  margin: 5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (max-width: 890px) {
